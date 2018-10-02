@@ -70,14 +70,4 @@
          <url-pattern>/*</url-pattern>
      </servlet-mapping>-->
 
-
-    <servlet>
-        <servlet-name>loginServlet</servlet-name>
-        <servlet-class>com.atguigu.javaweb.LoginServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>loginServlet</servlet-name>
-        <url-pattern>*.do</url-pattern>
-    </servlet-mapping>
 </web-app>
