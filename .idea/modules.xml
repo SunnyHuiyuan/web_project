@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/day_29/day_29.iml" filepath="$PROJECT_DIR$/day_29/day_29.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day_30/day_30.iml" filepath="$PROJECT_DIR$/day_30/day_30.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day_31/day_31.iml" filepath="$PROJECT_DIR$/day_31/day_31.iml" />
       <module fileurl="file://$PROJECT_DIR$/day_34/day_34.iml" filepath="$PROJECT_DIR$/day_34/day_34.iml" />
       <module fileurl="file://$PROJECT_DIR$/day_35/day_35.iml" filepath="$PROJECT_DIR$/day_35/day_35.iml" />
       <module fileurl="file://$PROJECT_DIR$/day_36/day_36.iml" filepath="$PROJECT_DIR$/day_36/day_36.iml" />

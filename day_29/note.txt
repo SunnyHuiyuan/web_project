@@ -1,65 +1,65 @@
-1. Ê¹ÓÃ JavaEE °æµÄ Eclipse ¿ª·¢¶¯Ì¬µÄ WEB ¹¤³Ì(JavaWEB ÏîÄ¿)
-    1). °Ñ¿ª·¢Ñ¡ÏîÇĞ»»µ½ JavaEE
-    2). ¿ÉÒÔÔÚ Window -> Show View ÖĞÕÒµ½ Package Explorer, ²¢°ÑÆäÍÏ×§µ½¿ª·¢ÇøµÄ×ó±ß
-    3). ÔÚ Servers Ãæ°åÖĞĞÂ½¨ Tomcat ·şÎñÆ÷. Ò»¶¨Òª¹ØÁªµ½ Tomcat °²×°µÄ¸ùÄ¿Â¼
-    4). ĞÂ½¨Ò»¸ö Dynamic Web Project. ÆäÖĞ Target Runtime ĞèÑ¡Ôñ Tomcat6.0
-    5). ¿ª·¢ Java WEB Ó¦ÓÃ
-    6). ¿ÉÒÔÍ¨¹ı run on server  À´ÔËĞĞ WEB ÏîÄ¿.
+1. ä½¿ç”¨ JavaEE ç‰ˆçš„ Eclipse å¼€å‘åŠ¨æ€çš„ WEB å·¥ç¨‹(JavaWEB é¡¹ç›®)
+    1). æŠŠå¼€å‘é€‰é¡¹åˆ‡æ¢åˆ° JavaEE
+    2). å¯ä»¥åœ¨ Window -> Show View ä¸­æ‰¾åˆ° Package Explorer, å¹¶æŠŠå…¶æ‹–æ‹½åˆ°å¼€å‘åŒºçš„å·¦è¾¹
+    3). åœ¨ Servers é¢æ¿ä¸­æ–°å»º Tomcat æœåŠ¡å™¨. ä¸€å®šè¦å…³è”åˆ° Tomcat å®‰è£…çš„æ ¹ç›®å½•
+    4). æ–°å»ºä¸€ä¸ª Dynamic Web Project. å…¶ä¸­ Target Runtime éœ€é€‰æ‹© Tomcat6.0
+    5). å¼€å‘ Java WEB åº”ç”¨
+    6). å¯ä»¥é€šè¿‡ run on server  æ¥è¿è¡Œ WEB é¡¹ç›®.
 
-2. Servlet µÄ HelloWorld
-    1). ´´½¨Ò»¸ö Servlet ½Ó¿ÚµÄÊµÏÖÀà.
+2. Servlet çš„ HelloWorld
+    1). åˆ›å»ºä¸€ä¸ª Servlet æ¥å£çš„å®ç°ç±».
     public class HelloServlet implements Servlet
 
-2). ÔÚ web.xml ÎÄ¼şÖĞÅäÖÃºÍÓ³ÉäÕâ¸ö Servlet
+2). åœ¨ web.xml æ–‡ä»¶ä¸­é…ç½®å’Œæ˜ å°„è¿™ä¸ª Servlet
 
-	<!-- ÅäÖÃºÍÓ³Éä Servlet -->
+	<!-- é…ç½®å’Œæ˜ å°„ Servlet -->
 	<servlet>
-		<!-- Servlet ×¢²áµÄÃû×Ö -->
+		<!-- Servlet æ³¨å†Œçš„åå­— -->
 		<servlet-name>helloServlet</servlet-name>
-		<!-- Servlet µÄÈ«ÀàÃû -->
+		<!-- Servlet çš„å…¨ç±»å -->
 		<servlet-class>com.atguigu.javaweb.HelloServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<!-- ĞèÒªºÍÄ³Ò»¸ö servlet ½ÚµãµÄ serlvet-name ×Ó½ÚµãµÄÎÄ±¾½ÚµãÒ»ÖÂ -->
+		<!-- éœ€è¦å’ŒæŸä¸€ä¸ª servlet èŠ‚ç‚¹çš„ serlvet-name å­èŠ‚ç‚¹çš„æ–‡æœ¬èŠ‚ç‚¹ä¸€è‡´ -->
 		<servlet-name>helloServlet</servlet-name>
-		<!-- Ó³Éä¾ßÌåµÄ·ÃÎÊÂ·¾¶: / ´ú±íµ±Ç° WEB Ó¦ÓÃµÄ¸ùÄ¿Â¼. -->
+		<!-- æ˜ å°„å…·ä½“çš„è®¿é—®è·¯å¾„: / ä»£è¡¨å½“å‰ WEB åº”ç”¨çš„æ ¹ç›®å½•. -->
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
 
-3. Servlet ÈİÆ÷: ÔËĞĞ Servlet¡¢JSP¡¢Filter µÈµÄÈí¼ş»·¾³. 
-    1). ¿ÉÒÔÀ´´´½¨ Servlet, ²¢µ÷ÓÃ Servlet µÄÏà¹ØÉúÃüÖÜÆÚ·½·¨.
+3. Servlet å®¹å™¨: è¿è¡Œ Servletã€JSPã€Filter ç­‰çš„è½¯ä»¶ç¯å¢ƒ. 
+    1). å¯ä»¥æ¥åˆ›å»º Servlet, å¹¶è°ƒç”¨ Servlet çš„ç›¸å…³ç”Ÿå‘½å‘¨æœŸæ–¹æ³•.
     2). JSP, Filter, Listener, Tag ...
 
-4. Servlet ÉúÃüÖÜÆÚµÄ·½·¨: ÒÔÏÂ·½·¨¶¼ÊÇÓÉ Serlvet ÈİÆ÷¸ºÔğµ÷ÓÃ. 
-    1). ¹¹ÔìÆ÷: Ö»±»µ÷ÓÃÒ»´Î. Ö»ÓĞµÚÒ»´ÎÇëÇó Servlet Ê±, ´´½¨ Servlet µÄÊµÀı. µ÷ÓÃ¹¹ÔìÆ÷.
-    ÕâËµÃ÷ Serlvet µÄµ¥ÊµÀıµÄ!
-    2). init ·½·¨: Ö»±»µ÷ÓÃÒ»´Î. ÔÚ´´½¨ºÃÊµÀıºóÁ¢¼´±»µ÷ÓÃ. ÓÃÓÚ³õÊ¼»¯µ±Ç° Servlet.
-    3). service: ±»¶à´Îµ÷ÓÃ. Ã¿´ÎÇëÇó¶¼»áµ÷ÓÃ service ·½·¨. Êµ¼ÊÓÃÓÚÏìÓ¦ÇëÇóµÄ.
-    4). destroy: Ö»±»µ÷ÓÃÒ»´Î. ÔÚµ±Ç° Servlet ËùÔÚµÄ WEB Ó¦ÓÃ±»Ğ¶ÔØÇ°µ÷ÓÃ. ÓÃÓÚÊÍ·Åµ±Ç° Servlet ËùÕ¼ÓÃµÄ×ÊÔ´.
+4. Servlet ç”Ÿå‘½å‘¨æœŸçš„æ–¹æ³•: ä»¥ä¸‹æ–¹æ³•éƒ½æ˜¯ç”± Serlvet å®¹å™¨è´Ÿè´£è°ƒç”¨. 
+    1). æ„é€ å™¨: åªè¢«è°ƒç”¨ä¸€æ¬¡. åªæœ‰ç¬¬ä¸€æ¬¡è¯·æ±‚ Servlet æ—¶, åˆ›å»º Servlet çš„å®ä¾‹. è°ƒç”¨æ„é€ å™¨.
+    è¿™è¯´æ˜ Serlvet çš„å•å®ä¾‹çš„!
+    2). init æ–¹æ³•: åªè¢«è°ƒç”¨ä¸€æ¬¡. åœ¨åˆ›å»ºå¥½å®ä¾‹åç«‹å³è¢«è°ƒç”¨. ç”¨äºåˆå§‹åŒ–å½“å‰ Servlet.
+    3). service: è¢«å¤šæ¬¡è°ƒç”¨. æ¯æ¬¡è¯·æ±‚éƒ½ä¼šè°ƒç”¨ service æ–¹æ³•. å®é™…ç”¨äºå“åº”è¯·æ±‚çš„.
+    4). destroy: åªè¢«è°ƒç”¨ä¸€æ¬¡. åœ¨å½“å‰ Servlet æ‰€åœ¨çš„ WEB åº”ç”¨è¢«å¸è½½å‰è°ƒç”¨. ç”¨äºé‡Šæ”¾å½“å‰ Servlet æ‰€å ç”¨çš„èµ„æº.
 
-5. load-on-startup ²ÎÊı:
-    1).  ÅäÖÃÔÚ servlet ½ÚµãÖĞ:
+5. load-on-startup å‚æ•°:
+    1).  é…ç½®åœ¨ servlet èŠ‚ç‚¹ä¸­:
 
         <servlet>
-            <!-- Servlet ×¢²áµÄÃû×Ö -->
+            <!-- Servlet æ³¨å†Œçš„åå­— -->
             <servlet-name>secondServlet</servlet-name>
-            <!-- Servlet µÄÈ«ÀàÃû -->
+            <!-- Servlet çš„å…¨ç±»å -->
             <servlet-class>com.atguigu.javaweb.SecondServlet</servlet-class>
-            <!-- ¿ÉÒÔÖ¸¶¨ Servlet ±»´´½¨µÄÊ±»ú -->
+            <!-- å¯ä»¥æŒ‡å®š Servlet è¢«åˆ›å»ºçš„æ—¶æœº -->
             <load-on-startup>2</load-on-startup>
         </servlet>
 
-    2). load-on-startup: ¿ÉÒÔÖ¸¶¨ Serlvet ±»´´½¨µÄÊ±»ú. ÈôÎª¸ºÊı, ÔòÔÚµÚÒ»´ÎÇëÇóÊ±±»´´½¨.ÈôÎª 0 »òÕıÊı, ÔòÔÚµ±Ç° WEB Ó¦ÓÃ±»
-    Serlvet ÈİÆ÷¼ÓÔØÊ±´´½¨ÊµÀı, ÇÒÊı×éÔ½Ğ¡Ô½Ôç±»´´½¨.
+    2). load-on-startup: å¯ä»¥æŒ‡å®š Serlvet è¢«åˆ›å»ºçš„æ—¶æœº. è‹¥ä¸ºè´Ÿæ•°, åˆ™åœ¨ç¬¬ä¸€æ¬¡è¯·æ±‚æ—¶è¢«åˆ›å»º.è‹¥ä¸º 0 æˆ–æ­£æ•°, åˆ™åœ¨å½“å‰ WEB åº”ç”¨è¢«
+    Serlvet å®¹å™¨åŠ è½½æ—¶åˆ›å»ºå®ä¾‹, ä¸”æ•°ç»„è¶Šå°è¶Šæ—©è¢«åˆ›å»º.
 
-6. ¹ØÓÚ serlvet-mapping£º
+6. å…³äº serlvet-mappingï¼š
 
-    1). Í¬Ò»¸öServlet¿ÉÒÔ±»Ó³Éäµ½¶à¸öURLÉÏ£¬¼´¶à¸ö <servlet-mapping> ÔªËØµÄ<servlet-name>×ÓÔªËØµÄÉèÖÃÖµ¿ÉÒÔÊÇÍ¬Ò»¸ö
-    ServletµÄ×¢²áÃû¡£
+    1). åŒä¸€ä¸ªServletå¯ä»¥è¢«æ˜ å°„åˆ°å¤šä¸ªURLä¸Šï¼Œå³å¤šä¸ª <servlet-mapping> å…ƒç´ çš„<servlet-name>å­å…ƒç´ çš„è®¾ç½®å€¼å¯ä»¥æ˜¯åŒä¸€ä¸ª
+    Servletçš„æ³¨å†Œåã€‚
 
-    2). ÔÚServletÓ³Éäµ½µÄURLÖĞÒ²¿ÉÒÔÊ¹ÓÃ * Í¨Åä·û£¬µ«ÊÇÖ»ÄÜÓĞÁ½ÖÖ¹Ì¶¨µÄ¸ñÊ½£º
-    Ò»ÖÖ¸ñÊ½ÊÇ¡°*.À©Õ¹Ãû¡±£¬ÁíÒ»ÖÖ¸ñÊ½ÊÇÒÔÕıĞ±¸Ü£¨/£©¿ªÍ·²¢ÒÔ¡°/*¡±½áÎ²¡£
+    2). åœ¨Servletæ˜ å°„åˆ°çš„URLä¸­ä¹Ÿå¯ä»¥ä½¿ç”¨ * é€šé…ç¬¦ï¼Œä½†æ˜¯åªèƒ½æœ‰ä¸¤ç§å›ºå®šçš„æ ¼å¼ï¼š
+    ä¸€ç§æ ¼å¼æ˜¯â€œ*.æ‰©å±•åâ€ï¼Œå¦ä¸€ç§æ ¼å¼æ˜¯ä»¥æ­£æ–œæ ï¼ˆ/ï¼‰å¼€å¤´å¹¶ä»¥â€œ/*â€ç»“å°¾ã€‚
 
     <servlet-mapping>
         <servlet-name>secondServlet</servlet-name>
@@ -73,26 +73,26 @@
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 
-    ×¢Òâ: ÒÔÏÂµÄ¼È´ø / ÓÖ´øÀ©Õ¹ÃûµÄ²»ºÏ·¨.
+    æ³¨æ„: ä»¥ä¸‹çš„æ—¢å¸¦ / åˆå¸¦æ‰©å±•åçš„ä¸åˆæ³•.
 
     <servlet-mapping>
         <servlet-name>secondServlet</servlet-name>
         <url-pattern>/*.action</url-pattern>
     </servlet-mapping>
 
-7. ServletConfig: ·â×°ÁË Serlvet µÄÅäÖÃĞÅÏ¢, ²¢ÇÒ¿ÉÒÔ»ñÈ¡ ServletContext ¶ÔÏó
+7. ServletConfig: å°è£…äº† Serlvet çš„é…ç½®ä¿¡æ¯, å¹¶ä¸”å¯ä»¥è·å– ServletContext å¯¹è±¡
 
-    1). ÅäÖÃ Serlvet µÄ³õÊ¼»¯²ÎÊı
+    1). é…ç½® Serlvet çš„åˆå§‹åŒ–å‚æ•°
 
         <servlet>
             <servlet-name>helloServlet</servlet-name>
             <servlet-class>com.atguigu.javaweb.HelloServlet</servlet-class>
 
-            <!-- ÅäÖÃ Serlvet µÄ³õÊ¼»¯²ÎÊı¡£ ÇÒ½Úµã±ØĞëÔÚ load-on-startup ½ÚµãµÄÇ°Ãæ -->
+            <!-- é…ç½® Serlvet çš„åˆå§‹åŒ–å‚æ•°ã€‚ ä¸”èŠ‚ç‚¹å¿…é¡»åœ¨ load-on-startup èŠ‚ç‚¹çš„å‰é¢ -->
             <init-param>
-                <!-- ²ÎÊıÃû -->
+                <!-- å‚æ•°å -->
                 <param-name>user</param-name>
-                <!-- ²ÎÊıÖµ -->
+                <!-- å‚æ•°å€¼ -->
                 <param-value>root</param-value>
             </init-param>
 
@@ -105,13 +105,13 @@
 
         </servlet>
 
-    2). »ñÈ¡³õÊ¼»¯²ÎÊı:
+    2). è·å–åˆå§‹åŒ–å‚æ•°:
 
-        > getInitParameter(String name): »ñÈ¡Ö¸¶¨²ÎÊıÃûµÄ³õÊ¼»¯²ÎÊı
-        > getInitParameterNames(): »ñÈ¡²ÎÊıÃû×é³ÉµÄ Enumeration ¶ÔÏó.
+        > getInitParameter(String name): è·å–æŒ‡å®šå‚æ•°åçš„åˆå§‹åŒ–å‚æ•°
+        > getInitParameterNames(): è·å–å‚æ•°åç»„æˆçš„ Enumeration å¯¹è±¡.
 
         String user = servletConfig.getInitParameter("user");
-        System.out.println("user£º " + user);
+        System.out.println("userï¼š " + user);
 
         Enumeration<String> names = servletConfig.getInitParameterNames();
         while(names.hasMoreElements()){
@@ -120,33 +120,33 @@
             System.out.println("^^" + name + ": " + value);
         }
 
-    3). »ñÈ¡ Serlvet µÄÅäÖÃÃû³Æ(ÁË½â)
+    3). è·å– Serlvet çš„é…ç½®åç§°(äº†è§£)
 
 8. ServletContext
 
-    1). ¿ÉÒÔÓÉ  SerlvetConfig »ñÈ¡:
+    1). å¯ä»¥ç”±  SerlvetConfig è·å–:
 
     ServletContext servletContext = servletConfig.getServletContext();
 
 
-    2). ¸Ã¶ÔÏó´ú±íµ±Ç° WEB Ó¦ÓÃ: ¿ÉÒÔÈÏÎª SerlvetContext ÊÇµ±Ç° WEB Ó¦ÓÃµÄÒ»¸ö´ó¹Ü¼Ò. ¿ÉÒÔ´ÓÖĞ»ñÈ¡µ½µ±Ç° WEB Ó¦ÓÃµÄ¸÷¸ö·½ÃæµÄĞÅÏ¢.
+    2). è¯¥å¯¹è±¡ä»£è¡¨å½“å‰ WEB åº”ç”¨: å¯ä»¥è®¤ä¸º SerlvetContext æ˜¯å½“å‰ WEB åº”ç”¨çš„ä¸€ä¸ªå¤§ç®¡å®¶. å¯ä»¥ä»ä¸­è·å–åˆ°å½“å‰ WEB åº”ç”¨çš„å„ä¸ªæ–¹é¢çš„ä¿¡æ¯.
 
-    ¢Ù. »ñÈ¡µ±Ç° WEB Ó¦ÓÃµÄ³õÊ¼»¯²ÎÊı
+    â‘ . è·å–å½“å‰ WEB åº”ç”¨çš„åˆå§‹åŒ–å‚æ•°
 
-    ÉèÖÃ³õÊ¼»¯²ÎÊı: ¿ÉÒÔÎªËùÓĞµÄ Servlet Ëù»ñÈ¡, ¶ø Servlet µÄ³õÊ¼»¯²ÎÊıÖ»ÓÃÄÇ¸ö Serlvet ¿ÉÒÔ»ñÈ¡.
+    è®¾ç½®åˆå§‹åŒ–å‚æ•°: å¯ä»¥ä¸ºæ‰€æœ‰çš„ Servlet æ‰€è·å–, è€Œ Servlet çš„åˆå§‹åŒ–å‚æ•°åªç”¨é‚£ä¸ª Serlvet å¯ä»¥è·å–.
 
-    <!-- ÅäÖÃµ±Ç° WEB Ó¦ÓÃµÄ³õÊ¼»¯²ÎÊı -->
+    <!-- é…ç½®å½“å‰ WEB åº”ç”¨çš„åˆå§‹åŒ–å‚æ•° -->
     <context-param>
         <param-name>driver</param-name>
         <param-value>com.mysql.jdbc.Driver</param-value>
     </context-param>
 
-    ·½·¨:
+    æ–¹æ³•:
 
     getInitParameter
     getInitParameterNames
 
-    ´úÂë:
+    ä»£ç :
 
     ServletContext servletContext = servletConfig.getServletContext();
 
@@ -159,50 +159,50 @@
         System.out.println("-->" + name);
     }
 
-    ¢Ú. »ñÈ¡µ±Ç° WEB Ó¦ÓÃµÄÄ³Ò»¸öÎÄ¼şÔÚ·şÎñÆ÷ÉÏµÄ¾ø¶ÔÂ·¾¶, ¶ø²»ÊÇ²¿ÊğÇ°µÄÂ·¾¶
+    â‘¡. è·å–å½“å‰ WEB åº”ç”¨çš„æŸä¸€ä¸ªæ–‡ä»¶åœ¨æœåŠ¡å™¨ä¸Šçš„ç»å¯¹è·¯å¾„, è€Œä¸æ˜¯éƒ¨ç½²å‰çš„è·¯å¾„
 
     getRealPath(String path);
 
-    ´úÂë:
+    ä»£ç :
 
     String realPath = servletContext.getRealPath("/note.txt");
     System.out.println(realPath);
 
-    ¢Û. »ñÈ¡µ±Ç° WEB Ó¦ÓÃµÄÃû³Æ:
+    â‘¢. è·å–å½“å‰ WEB åº”ç”¨çš„åç§°:
 
     getContextPath()
 
-    ´úÂë:
+    ä»£ç :
 
     String contextPath = servletContext.getContextPath();
     System.out.println(contextPath);
 
-    ¢Ü. »ñÈ¡µ±Ç° WEB Ó¦ÓÃµÄÄ³Ò»¸öÎÄ¼ş¶ÔÓ¦µÄÊäÈëÁ÷.
+    â‘£. è·å–å½“å‰ WEB åº”ç”¨çš„æŸä¸€ä¸ªæ–‡ä»¶å¯¹åº”çš„è¾“å…¥æµ.
 
-    getResourceAsStream(String path): path µÄ / Îªµ±Ç° WEB Ó¦ÓÃµÄ¸ùÄ¿Â¼.
+    getResourceAsStream(String path): path çš„ / ä¸ºå½“å‰ WEB åº”ç”¨çš„æ ¹ç›®å½•.
 
-    ´úÂë:
+    ä»£ç :
 
     InputStream is2 = servletContext.getResourceAsStream("/WEB-INF/classes/jdbc.properties");
 
-    ¢İ. ºÍ attribute Ïà¹ØµÄ¼¸¸ö·½·¨:
+    â‘¤. å’Œ attribute ç›¸å…³çš„å‡ ä¸ªæ–¹æ³•:
 
-9. GET ÇëÇóºÍ POST ÇëÇó:
+9. GET è¯·æ±‚å’Œ POST è¯·æ±‚:
 
-    1). Ê¹ÓÃGET·½Ê½´«µİ²ÎÊı:
+    1). ä½¿ç”¨GETæ–¹å¼ä¼ é€’å‚æ•°:
 
-    ¢Ù. ÔÚä¯ÀÀÆ÷µØÖ·À¸ÖĞÊäÈëÄ³¸öURLµØÖ·»òµ¥»÷ÍøÒ³ÉÏµÄÒ»¸ö³¬Á´½ÓÊ±£¬ä¯ÀÀÆ÷·¢³öµÄHTTPÇëÇóÏûÏ¢µÄÇëÇó·½Ê½ÎªGET¡£
-    ¢Ú. Èç¹ûÍøÒ³ÖĞµÄ<form>±íµ¥ÔªËØµÄ method ÊôĞÔ±»ÉèÖÃÎªÁË¡°GET¡±£¬ä¯ÀÀÆ÷Ìá½»Õâ¸öFORM±íµ¥Ê±Éú³ÉµÄHTTPÇëÇóÏûÏ¢µÄÇëÇó·½Ê½Ò²ÎªGET¡£
-    ¢Û. Ê¹ÓÃGETÇëÇó·½Ê½¸øWEB·şÎñÆ÷´«µİ²ÎÊıµÄ¸ñÊ½£º
+    â‘ . åœ¨æµè§ˆå™¨åœ°å€æ ä¸­è¾“å…¥æŸä¸ªURLåœ°å€æˆ–å•å‡»ç½‘é¡µä¸Šçš„ä¸€ä¸ªè¶…é“¾æ¥æ—¶ï¼Œæµè§ˆå™¨å‘å‡ºçš„HTTPè¯·æ±‚æ¶ˆæ¯çš„è¯·æ±‚æ–¹å¼ä¸ºGETã€‚
+    â‘¡. å¦‚æœç½‘é¡µä¸­çš„<form>è¡¨å•å…ƒç´ çš„ method å±æ€§è¢«è®¾ç½®ä¸ºäº†â€œGETâ€ï¼Œæµè§ˆå™¨æäº¤è¿™ä¸ªFORMè¡¨å•æ—¶ç”Ÿæˆçš„HTTPè¯·æ±‚æ¶ˆæ¯çš„è¯·æ±‚æ–¹å¼ä¹Ÿä¸ºGETã€‚
+    â‘¢. ä½¿ç”¨GETè¯·æ±‚æ–¹å¼ç»™WEBæœåŠ¡å™¨ä¼ é€’å‚æ•°çš„æ ¼å¼ï¼š
 
     http://www.atguigu.com/counter.jsp?name=lc&password=123
 
-    ¢Ü. Ê¹ÓÃGET·½Ê½´«ËÍµÄÊı¾İÁ¿Ò»°ãÏŞÖÆÔÚ 1KB ÒÔÏÂ¡£
+    â‘£. ä½¿ç”¨GETæ–¹å¼ä¼ é€çš„æ•°æ®é‡ä¸€èˆ¬é™åˆ¶åœ¨ 1KB ä»¥ä¸‹ã€‚
 
-    2). Ê¹ÓÃ POST ·½Ê½´«µİ²ÎÊı:
+    2). ä½¿ç”¨ POST æ–¹å¼ä¼ é€’å‚æ•°:
 
-    ¢Ù. POST ÇëÇó·½Ê½Ö÷ÒªÓÃÓÚÏò WEB ·şÎñÆ÷¶Ë³ÌĞòÌá½» FORM ±íµ¥ÖĞµÄÊı¾İ: form ±íµ¥µÄ method ÖÃÎª POST
-    ¢Ú. POST ·½Ê½½«¸÷¸ö±íµ¥×Ö¶ÎÔªËØ¼°ÆäÊı¾İ×÷Îª HTTP ÏûÏ¢µÄÊµÌåÄÚÈİ·¢ËÍ¸ø WEB ·şÎñÆ÷£¬´«ËÍµÄÊı¾İÁ¿Òª±ÈÊ¹ÓÃGET·½Ê½´«ËÍµÄÊı¾İÁ¿´óµÃ¶à¡£
+    â‘ . POST è¯·æ±‚æ–¹å¼ä¸»è¦ç”¨äºå‘ WEB æœåŠ¡å™¨ç«¯ç¨‹åºæäº¤ FORM è¡¨å•ä¸­çš„æ•°æ®: form è¡¨å•çš„ method ç½®ä¸º POST
+    â‘¡. POST æ–¹å¼å°†å„ä¸ªè¡¨å•å­—æ®µå…ƒç´ åŠå…¶æ•°æ®ä½œä¸º HTTP æ¶ˆæ¯çš„å®ä½“å†…å®¹å‘é€ç»™ WEB æœåŠ¡å™¨ï¼Œä¼ é€çš„æ•°æ®é‡è¦æ¯”ä½¿ç”¨GETæ–¹å¼ä¼ é€çš„æ•°æ®é‡å¤§å¾—å¤šã€‚
 
     POST /counter.jsp HTTP/1.1
     referer: http://localhost:8080/Register.html
@@ -210,75 +210,75 @@
     host: localhost:8080
     content-length: 43
 
-    name=zhangsan&password=123              --ÇëÇóÌåÖĞ´«µİ²ÎÊı.
+    name=zhangsan&password=123              --è¯·æ±‚ä½“ä¸­ä¼ é€’å‚æ•°.
 
-10. ÈçºÎÔÚ Serlvet ÖĞ»ñÈ¡ÇëÇóĞÅÏ¢:
+10. å¦‚ä½•åœ¨ Serlvet ä¸­è·å–è¯·æ±‚ä¿¡æ¯:
 
-    1). Servlet µÄ service() ·½·¨ÓÃÓÚÓ¦´ğÇëÇó: ÒòÎªÃ¿´ÎÇëÇó¶¼»áµ÷ÓÃ service() ·½·¨
+    1). Servlet çš„ service() æ–¹æ³•ç”¨äºåº”ç­”è¯·æ±‚: å› ä¸ºæ¯æ¬¡è¯·æ±‚éƒ½ä¼šè°ƒç”¨ service() æ–¹æ³•
 
     public void service(ServletRequest request, ServletResponse response)
                 throws ServletException, IOException
 
-    ServletRequest: ·â×°ÁËÇëÇóĞÅÏ¢. ¿ÉÒÔ´ÓÖĞ»ñÈ¡µ½ÈÎºÎµÄÇëÇóĞÅÏ¢.
-    ServletResponse: ·â×°ÁËÏìÓ¦ĞÅÏ¢, Èç¹ûÏë¸øÓÃ»§Ê²Ã´ÏìÓ¦, ¾ßÌå¿ÉÒÔÊ¹ÓÃ¸Ã½Ó¿ÚµÄ·½·¨ÊµÏÖ.
+    ServletRequest: å°è£…äº†è¯·æ±‚ä¿¡æ¯. å¯ä»¥ä»ä¸­è·å–åˆ°ä»»ä½•çš„è¯·æ±‚ä¿¡æ¯.
+    ServletResponse: å°è£…äº†å“åº”ä¿¡æ¯, å¦‚æœæƒ³ç»™ç”¨æˆ·ä»€ä¹ˆå“åº”, å…·ä½“å¯ä»¥ä½¿ç”¨è¯¥æ¥å£çš„æ–¹æ³•å®ç°.
 
-    ÕâÁ½¸ö½Ó¿ÚµÄÊµÏÖÀà¶¼ÊÇ·şÎñÆ÷¸øÓèÊµÏÖµÄ, ²¢ÔÚ·şÎñÆ÷µ÷ÓÃ service ·½·¨Ê±´«Èë.
+    è¿™ä¸¤ä¸ªæ¥å£çš„å®ç°ç±»éƒ½æ˜¯æœåŠ¡å™¨ç»™äºˆå®ç°çš„, å¹¶åœ¨æœåŠ¡å™¨è°ƒç”¨ service æ–¹æ³•æ—¶ä¼ å…¥.
 
-    2). ServletRequest: ·â×°ÁËÇëÇóĞÅÏ¢. ¿ÉÒÔ´ÓÖĞ»ñÈ¡µ½ÈÎºÎµÄÇëÇóĞÅÏ¢.
+    2). ServletRequest: å°è£…äº†è¯·æ±‚ä¿¡æ¯. å¯ä»¥ä»ä¸­è·å–åˆ°ä»»ä½•çš„è¯·æ±‚ä¿¡æ¯.
 
-    ¢Ù. »ñÈ¡ÇëÇó²ÎÊı:
+    â‘ . è·å–è¯·æ±‚å‚æ•°:
 
-        > String getParameter(String name): ¸ù¾İÇëÇó²ÎÊıµÄÃû×Ö, ·µ»Ø²ÎÊıÖµ.
-        ÈôÇëÇó²ÎÊıÓĞ¶à¸öÖµ(ÀıÈç checkbox), ¸Ã·½·¨Ö»ÄÜ»ñÈ¡µ½µÚÒ»¸öÌá½»µÄÖµ.
+        > String getParameter(String name): æ ¹æ®è¯·æ±‚å‚æ•°çš„åå­—, è¿”å›å‚æ•°å€¼.
+        è‹¥è¯·æ±‚å‚æ•°æœ‰å¤šä¸ªå€¼(ä¾‹å¦‚ checkbox), è¯¥æ–¹æ³•åªèƒ½è·å–åˆ°ç¬¬ä¸€ä¸ªæäº¤çš„å€¼.
 
-        > String[] getParameterValues(String name): ¸ù¾İÇëÇó²ÎÊıµÄÃû×Ö, ·µ»ØÇëÇó²ÎÊı¶ÔÓ¦µÄ×Ö·û´®Êı×é.
+        > String[] getParameterValues(String name): æ ¹æ®è¯·æ±‚å‚æ•°çš„åå­—, è¿”å›è¯·æ±‚å‚æ•°å¯¹åº”çš„å­—ç¬¦ä¸²æ•°ç»„.
 
-        > Enumeration getParameterNames(): ·µ»Ø²ÎÊıÃû¶ÔÓ¦µÄ Enumeration ¶ÔÏó,
-        ÀàËÆÓÚ ServletConfig(»ò ServletContext) µÄ getInitParameterNames() ·½·¨.
+        > Enumeration getParameterNames(): è¿”å›å‚æ•°åå¯¹åº”çš„ Enumeration å¯¹è±¡,
+        ç±»ä¼¼äº ServletConfig(æˆ– ServletContext) çš„ getInitParameterNames() æ–¹æ³•.
 
-        > Map getParameterMap(): ·µ»ØÇëÇó²ÎÊıµÄ¼üÖµ¶Ô: key: ²ÎÊıÃû,  value: ²ÎÊıÖµ, String Êı×éÀàĞÍ.
+        > Map getParameterMap(): è¿”å›è¯·æ±‚å‚æ•°çš„é”®å€¼å¯¹: key: å‚æ•°å,  value: å‚æ•°å€¼, String æ•°ç»„ç±»å‹.
 
-    ¢Ú. »ñÈ¡ÇëÇóµÄ URI:
+    â‘¡. è·å–è¯·æ±‚çš„ URI:
 
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 
         String requestURI = httpServletRequest.getRequestURI();
         System.out.println(requestURI); //  /day_29/loginServlet
 
-    ¢Û. »ñÈ¡ÇëÇó·½Ê½:
+    â‘¢. è·å–è¯·æ±‚æ–¹å¼:
 
         String method = httpServletRequest.getMethod();
         System.out.println(method); //GET
 
-    ¢Ü. ÈôÊÇÒ»¸ö GET ÇëÇó, »ñÈ¡ÇëÇó²ÎÊı¶ÔÓ¦µÄÄÇ¸ö×Ö·û´®, ¼´ ? ºóµÄÄÇ¸ö×Ö·û´®.
+    â‘£. è‹¥æ˜¯ä¸€ä¸ª GET è¯·æ±‚, è·å–è¯·æ±‚å‚æ•°å¯¹åº”çš„é‚£ä¸ªå­—ç¬¦ä¸², å³ ? åçš„é‚£ä¸ªå­—ç¬¦ä¸².
 
         String queryString = httpServletRequest.getQueryString();
         System.out.println(queryString); //user=atguigu&password=123456&interesting=game&interesting=party&interesting=shopping
 
-    ¢İ. »ñÈ¡ÇëÇóµÄ Serlvet µÄÓ³ÉäÂ·¾¶
+    â‘¤. è·å–è¯·æ±‚çš„ Serlvet çš„æ˜ å°„è·¯å¾„
 
        String servletPath = httpServletRequest.getServletPath();
        System.out.println(servletPath);  //  /loginServlet
 
-    ¢Ş. ºÍ attribute Ïà¹ØµÄ¼¸¸ö·½·¨:
+    â‘¥. å’Œ attribute ç›¸å…³çš„å‡ ä¸ªæ–¹æ³•:
 
-    3). HttpServletRequest: ÊÇ SerlvetRequest µÄ×Ó½Ó¿Ú. Õë¶ÔÓÚ HTTP ÇëÇóËù¶¨Òå. Àï±ß°üº¬ÁË´óÁ¿»ñÈ¡ HTTP ÇëÇóÏà¹ØµÄ·½·¨.
+    3). HttpServletRequest: æ˜¯ SerlvetRequest çš„å­æ¥å£. é’ˆå¯¹äº HTTP è¯·æ±‚æ‰€å®šä¹‰. é‡Œè¾¹åŒ…å«äº†å¤§é‡è·å– HTTP è¯·æ±‚ç›¸å…³çš„æ–¹æ³•.
 
-    4). ServletResponse: ·â×°ÁËÏìÓ¦ĞÅÏ¢, Èç¹ûÏë¸øÓÃ»§Ê²Ã´ÏìÓ¦, ¾ßÌå¿ÉÒÔÊ¹ÓÃ¸Ã½Ó¿ÚµÄ·½·¨ÊµÏÖ.
+    4). ServletResponse: å°è£…äº†å“åº”ä¿¡æ¯, å¦‚æœæƒ³ç»™ç”¨æˆ·ä»€ä¹ˆå“åº”, å…·ä½“å¯ä»¥ä½¿ç”¨è¯¥æ¥å£çš„æ–¹æ³•å®ç°.
 
-    ¢Ù. *getWriter(): ·µ»Ø PrintWriter ¶ÔÏó. µ÷ÓÃ¸Ã¶ÔÏóµÄ print() ·½·¨, ½«°Ñ print() ÖĞµÄ²ÎÊıÖ±½Ó´òÓ¡
-    µ½¿Í»§µÄä¯ÀÀÆ÷ÉÏ.
+    â‘ . *getWriter(): è¿”å› PrintWriter å¯¹è±¡. è°ƒç”¨è¯¥å¯¹è±¡çš„ print() æ–¹æ³•, å°†æŠŠ print() ä¸­çš„å‚æ•°ç›´æ¥æ‰“å°
+    åˆ°å®¢æˆ·çš„æµè§ˆå™¨ä¸Š.
 
-    ¢Ú. ÉèÖÃÏìÓ¦µÄÄÚÈİÀàĞÍ: response.setContentType("application/msword");
+    â‘¡. è®¾ç½®å“åº”çš„å†…å®¹ç±»å‹: response.setContentType("application/msword");
 
-    ¢Û. void sendRedirect(String location): ÇëÇóµÄÖØ¶¨Ïò. (´Ë·½·¨Îª HttpServletResponse ÖĞ¶¨Òå.)
+    â‘¢. void sendRedirect(String location): è¯·æ±‚çš„é‡å®šå‘. (æ­¤æ–¹æ³•ä¸º HttpServletResponse ä¸­å®šä¹‰.)
 
 -----------------------------------------------------------------------------
 
-ÔÚ web.xml ÎÄ¼şÖĞÉèÖÃÁ½¸ö WEB Ó¦ÓÃµÄ³õÊ¼»¯²ÎÊı, user, password.
-¶¨ÒåÒ»¸ö login.html, Àï±ß¶¨ÒåÁ½¸öÇëÇó×Ö¶Î: user, password. ·¢ËÍÇëÇóµ½ loginServlet
-ÔÚ´´½¨Ò»¸ö LoginServlet, ÔÚÆäÖĞ»ñÈ¡ÇëÇóµÄ user, password. ±È¶ÔÆäºÍ web.xml ÎÄ¼şÖĞ¶¨ÒåµÄÇëÇó²ÎÊıÊÇ·ñÒ»ÖÂ
-ÈôÒ»ÖÂ, ÏìÓ¦ Hello:xxx, Èô²»Ò»ÖÂ, ÏìÓ¦ Sorry: xxx  xxx Îª user.
+åœ¨ web.xml æ–‡ä»¶ä¸­è®¾ç½®ä¸¤ä¸ª WEB åº”ç”¨çš„åˆå§‹åŒ–å‚æ•°, user, password.
+å®šä¹‰ä¸€ä¸ª login.html, é‡Œè¾¹å®šä¹‰ä¸¤ä¸ªè¯·æ±‚å­—æ®µ: user, password. å‘é€è¯·æ±‚åˆ° loginServlet
+åœ¨åˆ›å»ºä¸€ä¸ª LoginServlet, åœ¨å…¶ä¸­è·å–è¯·æ±‚çš„ user, password. æ¯”å¯¹å…¶å’Œ web.xml æ–‡ä»¶ä¸­å®šä¹‰çš„è¯·æ±‚å‚æ•°æ˜¯å¦ä¸€è‡´
+è‹¥ä¸€è‡´, å“åº” Hello:xxx, è‹¥ä¸ä¸€è‡´, å“åº” Sorry: xxx  xxx ä¸º user.
 
 -----------------------------------------------------------------------------
 

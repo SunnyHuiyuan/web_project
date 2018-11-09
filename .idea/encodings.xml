@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/day_29/note.txt" charset="GBK" />
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/day_29/note.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day_29/src/com/atguigu/javaweb/HelloServlet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day_29/src/com/atguigu/javaweb/LoginServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/note.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/src/com/atguigu/javaweb/ForwardServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/src/com/atguigu/javaweb/LoginServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/src/com/atguigu/javaweb/LoginServlet2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/src/com/atguigu/javaweb/MyGenericServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/src/com/atguigu/javaweb/MyHttpServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/src/com/atguigu/javaweb/RedirectServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/src/com/atguigu/javaweb/TestAttr.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_30/src/com/atguigu/javaweb/TestServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_31/note.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_31/src/com/atguigu/javaweb/mvc/ListAllStudentServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day_31/src/com/atguigu/javaweb/mvc/StudentDao.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
