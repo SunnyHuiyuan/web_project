@@ -10,6 +10,8 @@
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/day_36/web/WEB-INF/lib/standard.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/day_36/web/WEB-INF/lib/jstl.jar" />
+          <element id="file-copy" path="F:/jar包/jstl.jar" />
+          <element id="file-copy" path="F:/jar包/standard.jar" />
         </element>
       </element>
     </root>

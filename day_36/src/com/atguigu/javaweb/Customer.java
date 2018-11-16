@@ -32,4 +32,10 @@ public class Customer {
     public Customer() {
         System.out.println("Customer 的构造器......");
     }
+
+    public Customer(Integer id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
 }
