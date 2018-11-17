@@ -51,7 +51,7 @@
         </servlet>
 
     2). load-on-startup: 可以指定 Serlvet 被创建的时机. 若为负数, 则在第一次请求时被创建.若为 0 或正数, 则在当前 WEB 应用被
-    Serlvet 容器加载时创建实例, 且数组越小越早被创建.
+    Serlvet 容器加载时创建实例, 且数字越小越早被创建.
 
 6. 关于 serlvet-mapping：
 
@@ -63,7 +63,7 @@
 
     <servlet-mapping>
         <servlet-name>secondServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
     OR
