@@ -5,6 +5,7 @@
 <%@ page import="java.util.HashMap" %>
 <%@ taglib prefix="atguigu" uri="http://www.atguigu.com/myTag/core" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -74,5 +75,17 @@
     <atguigu:when test="${param.age>20}">--高中毕业</atguigu:when>
     <atguigu:otherwise>--高中以下......</atguigu:otherwise>
 </atguigu:choose>
+<br><br>
+
+<%--使用一个 EL 自定义函数--%>
+${fn:length(param.name)}
+<br><br>
+
+<%--转为大写--%>
+${fn:toUpperCase(param.name1)}
+<br><br>
+
+<%--测试自定义的EL函数--%>
+${atguigu:concat(param.name1,param.name2)}
 </body>
 </html>
