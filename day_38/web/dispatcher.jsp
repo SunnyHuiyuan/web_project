@@ -5,11 +5,13 @@
 </head>
 <body>
 
-<h4>Test Page</h4>
+<%--
+<jsp:forward page="test.jsp"></jsp:forward>
+<jsp:include page="/test.jsp"></jsp:include>
+--%>
 
 <%
-    System.out.println("5:Test Jsp");//5
+    int i = 10 / 0;
 %>
-
 </body>
 </html>
