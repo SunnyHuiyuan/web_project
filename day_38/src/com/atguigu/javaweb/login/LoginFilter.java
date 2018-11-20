@@ -3,7 +3,6 @@ package com.atguigu.javaweb.login;
 import com.atguigu.javaweb.HttpFilter;
 
 import javax.servlet.FilterChain;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebFilter;
@@ -48,13 +47,13 @@ public class LoginFilter extends HttpFilter {
         }
 
         //3.从 session 中获取 sessionKey 对应的值，若值不存在，则重定向到redirectUrl
-        Object user=request.getSession().getAttribute(sessionKey);
-        if(user==null){
-            response.sendRedirect(request.getContextPath()+redirectUrl);
+        Object user = request.getSession().getAttribute(sessionKey);
+        if (user == null) {
+            response.sendRedirect(request.getContextPath() + redirectUrl);
             return;
         }
 
         //4.若存在，则放行，允许访问。
-        filterChain.doFilter(request,response);
+        filterChain.doFilter(request, response);
     }
 }
