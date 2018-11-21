@@ -9,7 +9,10 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-@WebFilter(filterName = "AuthorityFilter", urlPatterns = "*.jsp")
+/**
+ * 为了让content.jsp能顺利到达bbs.jsp,先暂时注释掉过滤器
+ */
+//@WebFilter(filterName = "AuthorityFilter", urlPatterns = "*.jsp")
 public class AuthorityFilter extends HttpFilter {
 
     @Override

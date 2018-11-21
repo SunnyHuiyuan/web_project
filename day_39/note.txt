@@ -1,64 +1,3 @@
-2. HttpServletWrapper 和 HttpServletResponseWrapper
-
-1). Servlet API 中提供了一个 HttpServletRequestWrapper 类来包装原始的 request 对象,
-HttpServletRequestWrapper 类实现了 HttpServletRequest 接口中的所有方法, 
-这些方法的内部实现都是仅仅调用了一下所包装的的 request 对象的对应方法
-
-//包装类实现 ServletRequest 接口. 
-public class ServletRequestWrapper implements ServletRequest {
-
-    //被包装的那个 ServletRequest 对象
-    private ServletRequest request;
-	
-	//构造器传入 ServletRequest 实现类对象
-    public ServletRequestWrapper(ServletRequest request) {
-		if (request == null) {
-		    throw new IllegalArgumentException("Request cannot be null");   
-		}
-		this.request = request;
-    }
-
-	//具体实现 ServletRequest 的方法: 调用被包装的那个成员变量的方法实现。 
-    public Object getAttribute(String name) {
-		return this.request.getAttribute(name);
-	}
-
-    public Enumeration getAttributeNames() {
-		return this.request.getAttributeNames();
-	}    
-	
-	//...	
-}	
-
-相类似 Servlet API 也提供了一个 HttpServletResponseWrapper 类来包装原始的 response 对象
-
-2). 作用: 用于对 HttpServletRequest 或 HttpServletResponse 的某一个方法进行修改或增强.
-
-public class MyHttpServletRequest extends HttpServletRequestWrapper{
-
-	public MyHttpServletRequest(HttpServletRequest request) {
-		super(request);
-	}
-	
-	@Override
-	public String getParameter(String name) {
-		String val = super.getParameter(name);
-		if(val != null && val.contains(" fuck ")){
-			val = val.replace("fuck", "****");
-		}
-		return val;
-	}
-}
-
-3). 使用: 在 Filter 中, 利用 MyHttpServletRequest 替换传入的 HttpServletRequest
-
-HttpServletRequest req = new MyHttpServletRequest(request);
-filterChain.doFilter(req, response);
-
-此时到达目标 Servlet 或 JSP 的 HttpServletRequest 实际上是 MyHttpServletRequest
-
-
-
 1. 使用 Filter 完成一个简单的权限模型:
 
 1). 需求: 
@@ -181,4 +120,61 @@ filterChain.doFilter(req, response);
 	authority-manager.jsp 修改权限的表单提交后 update 方法: 获取请求参数: username, authory(多选); 把选项封装为 List; 调用
 	UserDao 的 update() 方法实现权限的修改; 重定向到 authority-manager.jsp
 	
-	
+2. HttpServletWrapper 和 HttpServletResponseWrapper
+
+1). Servlet API 中提供了一个 HttpServletRequestWrapper 类来包装原始的 request 对象,
+HttpServletRequestWrapper 类实现了 HttpServletRequest 接口中的所有方法,
+这些方法的内部实现都是仅仅调用了一下所包装的的 request 对象的对应方法
+
+//包装类实现 ServletRequest 接口.
+public class ServletRequestWrapper implements ServletRequest {
+
+    //被包装的那个 ServletRequest 对象
+    private ServletRequest request;
+
+	//构造器传入 ServletRequest 实现类对象
+    public ServletRequestWrapper(ServletRequest request) {
+		if (request == null) {
+		    throw new IllegalArgumentException("Request cannot be null");
+		}
+		this.request = request;
+    }
+
+	//具体实现 ServletRequest 的方法: 调用被包装的那个成员变量的方法实现。
+    public Object getAttribute(String name) {
+		return this.request.getAttribute(name);
+	}
+
+    public Enumeration getAttributeNames() {
+		return this.request.getAttributeNames();
+	}
+
+	//...
+}
+
+相类似 Servlet API 也提供了一个 HttpServletResponseWrapper 类来包装原始的 response 对象
+
+2). 作用: 用于对 HttpServletRequest 或 HttpServletResponse 的某一个方法进行修改或增强.
+
+public class MyHttpServletRequest extends HttpServletRequestWrapper{
+
+	public MyHttpServletRequest(HttpServletRequest request) {
+		super(request);
+	}
+
+	@Override
+	public String getParameter(String name) {
+		String val = super.getParameter(name);
+		if(val != null && val.contains(" fuck ")){
+			val = val.replace("fuck", "****");
+		}
+		return val;
+	}
+}
+
+3). 使用: 在 Filter 中, 利用 MyHttpServletRequest 替换传入的 HttpServletRequest
+
+HttpServletRequest req = new MyHttpServletRequest(request);
+filterChain.doFilter(req, response);
+
+此时到达目标 Servlet 或 JSP 的 HttpServletRequest 实际上是 MyHttpServletRequest
