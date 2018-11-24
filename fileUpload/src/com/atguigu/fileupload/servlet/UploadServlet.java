@@ -77,6 +77,7 @@ public class UploadServlet extends javax.servlet.http.HttpServlet {
                     String value = item.getString();
 
                     System.out.println(name + ": " + value);
+
                 }
                 //若是文件域则保存到E:\files目录下
                 else {

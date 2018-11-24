@@ -1,4 +1,4 @@
-package com.atguigu.fileupload.beans;
+package com.atguigu.fileupload.app.beans;
 
 public class FileUploadBean {
 

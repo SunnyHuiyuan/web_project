@@ -3,7 +3,7 @@
 <head>
     <title>$Title$</title>
 </head>
-<body>
+<body style="text-align: center">
 
 <a href="app/upload.jsp">多个文件的上传</a>
 <br><br>
