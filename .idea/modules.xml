@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/day_39/day_39.iml" filepath="$PROJECT_DIR$/day_39/day_39.iml" />
       <module fileurl="file://$PROJECT_DIR$/day_40/day_40.iml" filepath="$PROJECT_DIR$/day_40/day_40.iml" />
       <module fileurl="file://$PROJECT_DIR$/fileUpload/fileUpload.iml" filepath="$PROJECT_DIR$/fileUpload/fileUpload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvc/mvc.iml" filepath="$PROJECT_DIR$/mvc/mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/web_project.iml" filepath="$PROJECT_DIR$/web_project.iml" />
     </modules>
   </component>
