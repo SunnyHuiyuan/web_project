@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    <script type="text/javascript" src="scripts/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(function () {
             $(".delete").click(function () {

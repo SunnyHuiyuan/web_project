@@ -8,7 +8,7 @@
           <element id="module-output" name="day_31" />
         </element>
         <element id="directory" name="lib">
-          <element id="file-copy" path="F:/jar包/mysql-connector-java-8.0.12.jar" />
+          <element id="library" level="project" name="lib" />
         </element>
       </element>
     </root>
