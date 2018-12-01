@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+        /**
+         *重写JS实验之员工管理
+         *
+         */
+        /*
+         * 为 #employeetable 的所有的 a 节点添加 Onclick 响应函数:
+         * 1. 弹出确认对话框: 确定要删除 xx 的信息吗? xx 为当前 a 节点所在的 td 所在的 tr 的
+         * 第一个 td 子节点的文本值, 且要去除前后空格.
+         * 2. 若点击 "确认" , 则删除 a 节点的所在的 行
+         *
+         * 注意:
+         * 1. a 节点是一个超级链接, 可以在其 onclick 事件中通过返回 false, 来取消默认行为
+         * 2. tr 的直接父节点为 tbody, 而不是 table
+         * 3. 可以把去除前后空格的代码写成一个 trim(str) 函数.
+         *
+         * 为 #addEmpButton 添加 onclick 响应函数:
+         * 1. 获取 #name, #email, #salary 的文本框的值
+         * 2. 利用 1 获取的文本值创建 3 个 td 节点, 在创建一个 tr 节点. 并把以上的 3 个 td
+         *    节点加为 tr 节点的子节点
+            <tr>
+                <td>Tom</td>
+                <td>tom@tom.com</td>
+                <td>5000</td>
+            </tr>
+         * 3. 在创建一个 td 节点: <td><a href="deleteEmp?id=xxx">Delete</a></td>
+         * 4. 把 3 创建的 td 也加为 tr 的子节点.
+         * 5. 再把 tr 加为 #employeetable 的 tbody 子节点的子节点.
+         * 6. 为新创建的 tr 的 a 子节点添加 Onclick 响应函数, 使其也具备删除的功能.
+         *
+         *
+         */
+
+        $(function () {
+
+            //1. jQuery 对象调用 jQuery 提供的方法的返回值如果是一个对象的话
+            //那么这个对象一定是一个 jQuery 对象
+            //2. find() 方法: 查找子节点, 返回值为子节点对应的 jQuery 对象
+            function removeTr(aNode) {
+                //获取a节点所在的tr节点,返回的是jQuery对象
+                var $trNode = $(aNode).parent().parent();
+                var textContent = $trNode.find("td:first").text();
+                textContent = $.trim(textContent);
+
+                var flag = confirm("确定要删除" + textContent + "的信息吗?");
+                if (flag) {
+                    $trNode.remove();
+                }
+                //取消 a 节点的默认行为
+                return false;
+            }
+
+            //a节点的删除功能
+            $("#employeetable a").click(function () {
+                return removeTr(this);
+            });
+
+            //添加<tr>
+            $("#addEmpButton").click(function () {
+                $("<tr></tr>").append("<td>" + $("#name").val() + "</td>")
+                    .append("<td>" + $("#email").val() + "</td>")
+                    .append("<td>" + $("#salary").val() + "</td>")
+                    .append("<td><a href='deleteEmp?id=xxx'>Delete</a></td>")
+                    .appendTo("#employeetable tbody")
+                    .find("a")
+                    .click(function () {
+                        return removeTr(this);
+                    });
+            });
+        })
+
+
+    </script>
+</head>
+<center>
+
+    <br> <br> 添加新员工 <br> <br>
+
+    name: <input type="text" name="name" id="name"/>&nbsp;&nbsp;
+    email: <input type="text" name="email" id="email"/>&nbsp;&nbsp;
+    salary: <input type="text" name="salary" id="salary"/>
+    <br> <br>
+
+    <button id="addEmpButton" value="abc">Submit</button>
+    <br> <br>
+    <hr>
+    <br> <br>
+    <table id="employeetable" border="1" cellpadding="5" cellspacing=0>
+        <tbody>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>tom@tom.com</td>
+            <td>5000</td>
+            <td><a href="deleteEmp?id=001">Delete</a></td>
+        </tr>
+        <tr>
+            <td>
+                Jerry
+            </td>
+            <td>jerry@sohu.com</td>
+            <td>8000</td>
+            <td><a href="deleteEmp?id=002">Delete</a></td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>bob@tom.com</td>
+            <td>10000</td>
+            <td><a href="deleteEmp?id=003">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</center>
+
+</body>
+</html>
