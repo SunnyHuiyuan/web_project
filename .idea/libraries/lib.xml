@@ -15,6 +15,9 @@
       <root url="jar://E:/Source/jar/standard.jar!/" />
       <root url="jar://E:/Source/jar/gson-2.8.5.jar!/" />
       <root url="jar://E:/Source/jar/commons-dbcp-1.4.jar!/" />
+      <root url="jar://E:/Source/jar/jackson-annotations-2.9.7.jar!/" />
+      <root url="jar://E:/Source/jar/jackson-core-2.9.7.jar!/" />
+      <root url="jar://E:/Source/jar/jackson-databind-2.9.7.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

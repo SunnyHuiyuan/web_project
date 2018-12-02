@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ajax_lib">
+    <CLASSES>
+      <root url="jar://E:/Source/jar/jackson-databind-2.9.7.jar!/" />
+      <root url="jar://E:/Source/jar/jackson-core-2.9.7.jar!/" />
+      <root url="jar://E:/Source/jar/jackson-annotations-2.9.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

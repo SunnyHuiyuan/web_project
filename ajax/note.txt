@@ -1,0 +1,1 @@
+1.什么是ajax?不用刷新页面但可以和服务端进行通信的方式，实现ajax的主要方式是XMLHttpRequest对象
