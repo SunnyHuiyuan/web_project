@@ -43,7 +43,7 @@ public class AddToCartServlet extends HttpServlet {
                 .append("}");*/
 
         //使用jackson来将一个对象返回json数据类型
-        ObjectMapper mapper = new ObjectMapper();
+       /* ObjectMapper mapper = new ObjectMapper();
         String result = mapper.writeValueAsString(sc);
         System.out.println(result);
 
@@ -51,7 +51,7 @@ public class AddToCartServlet extends HttpServlet {
         response.setContentType("text/javascript");
 //        response.getWriter().print(result.toString());
         //调用mapper的writeValueAsString()方法把一个对象转为json字符串
-        response.getWriter().print(result);
+        response.getWriter().print(result);*/
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

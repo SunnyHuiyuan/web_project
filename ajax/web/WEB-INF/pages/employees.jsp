@@ -29,9 +29,11 @@
                     css: {
                         top: ($(window).height() - 400) / 2 + 'px',
                         left: ($(window).width() - 400) / 2 + 'px',
-                        width: '400px'
-                    }
-                })
+                        width: '400px',
+                        border: 'none'
+                    },
+                    overlayCss: {backgroundColor: "#fff"}
+                });
             }).ajaxStop($.unblockUI);
 
             $("#city").change(function () {
