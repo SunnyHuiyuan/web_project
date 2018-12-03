@@ -4,6 +4,13 @@
       <root url="jar://E:/Source/jar/jackson-databind-2.9.7.jar!/" />
       <root url="jar://E:/Source/jar/jackson-core-2.9.7.jar!/" />
       <root url="jar://E:/Source/jar/jackson-annotations-2.9.7.jar!/" />
+      <root url="jar://E:/Source/jar/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://E:/Source/jar/commons-dbutils-1.7.jar!/" />
+      <root url="jar://E:/Source/jar/mysql-connector-java-8.0.12.jar!/" />
+      <root url="jar://E:/Source/jar/junit-4.12.jar!/" />
+      <root url="jar://E:/Source/jar/standard.jar!/" />
+      <root url="jar://E:/Source/jar/hamcrest-core-1.3.jar!/" />
+      <root url="jar://E:/Source/jar/jstl.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
